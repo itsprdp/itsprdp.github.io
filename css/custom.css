@@ -1,104 +1,29 @@
-ul.socicon{
-  margin:0;
-}
-ul.socicon li{
-  display:block;
-  padding:0;
-  margin:0 5px 0 0;
-  float:left
-}
-ul.socicon li a{
-  width:32px;
-  height:32px;
-  display:block;
-  padding:0;
-  margin:0;
-}
-ul.socicon li a.dribbble{
-  background:url(/web/20141223173902/http://pradeepg.me/img/dribbble.png) 0 0 no-repeat
-}
-ul.socicon li a.github{
-  background:url(/web/20141223173902/http://pradeepg.me/img/git.png) 0 0 no-repeat
-}
-ul.socicon li a.facebook{
-  background:url(/web/20141223173902/http://pradeepg.me/img/facebook.png) 0 0 no-repeat
-}
-ul.socicon li a.google{
-  background:url(/web/20141223173902/http://pradeepg.me/img/google.png) 0 0 no-repeat;
-}
-ul.socicon li a.twitter{
-  background:url(/web/20141223173902/http://pradeepg.me/img/twitter.png) 0 0 no-repeat
-}
-ul.socicon li a.flickr{
-  background:url(/web/20141223173902/http://pradeepg.me/img/flickr.png) 0 0 no-repeat
-}
-ul.socicon li a.linkedin{
-  background:url(/web/20141223173902/http://pradeepg.me/img/linkedin.png) 0 0 no-repeat
-}
-ul.socicon li a.vimeo{
-  background:url(/web/20141223173902/http://pradeepg.me/img/vimeo.png) 0 0 no-repeat
+* {
+  font-family: 'Open Sans';
 }
 
-img.floatRight {
-  float: right;
-  margin: 10px;
-}
-
-img.floatLeft {
-  float: left;
-  margin: 15px;
-}
-
-.modalDialog {
-  position: fixed;
-  font-family: Arial, Helvetica, sans-serif;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 99999;
-  opacity:0;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-  pointer-events: none;
-}
-
-.modalDialog:target {
-  opacity:1;
-  pointer-events: auto;
-}
-
-.modalDialog > div {
-  width: 400px;
-  position: relative;
-  margin: 10% auto;
-  padding: 5px 20px 13px 20px;
-  border-radius: 10px;
-  background: #fff;
-  background: -moz-linear-gradient(#fff, #999);
-  background: -webkit-linear-gradient(#fff, #999);
-  background: -o-linear-gradient(#fff, #999);
-}
-
-.close {
-  background: #606061;
-  color: #FFFFFF;
-  line-height: 25px;
-  position: absolute;
-  right: -12px;
+.container.visible-xs > .col-xs-12 {
   text-align: center;
-  top: -10px;
-  width: 24px;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-  -moz-box-shadow: 1px 1px 3px #000;
-  -webkit-box-shadow: 1px 1px 3px #000;
-  box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: #00d9ff; }
+.avatar {
+  width: 170px;
+  height: 230px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+
+  p.lead {
+    font-size: 18px;
+  }
+
+  .page-header h1 {
+    font-size: 2em;
+  }
+
+  .avatar {
+    width: 230px;
+    height: 320px;
+  }
+
+}
