@@ -7,7 +7,7 @@
 }
 
 .avatar {
-  width: 170px;
+  width: 165px;
   height: 230px;
 }
 
@@ -21,9 +21,8 @@
     font-size: 2em;
   }
 
-  .avatar {
-    width: 230px;
-    height: 320px;
+  body > .container {
+    padding: 0 5% 0;
   }
 
 }
