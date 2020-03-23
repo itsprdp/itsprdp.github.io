@@ -1,0 +1,47 @@
+* {
+  font-family: 'Open Sans';
+}
+
+.container.visible-xs > .col-xs-12 {
+  text-align: center;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.avatar {
+  margin-top: 90px;
+  width: 230px;
+  height: 230px;
+  border-radius: 6px;
+}
+
+.work-email {
+  font-weight: 500;
+  color: #ccc;
+}
+
+.work-email:hover {
+  color: #337ab7;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+
+  p.lead {
+    font-size: 18px;
+  }
+
+  .page-header h1 {
+    font-size: 2em;
+  }
+
+  body > .container {
+    padding: 0 5% 0;
+  }
+
+  .avatar {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
