@@ -1,0 +1,11 @@
+name = "likes"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "LIKES"
+id = "f82589acc0694eb6bd79fada96e15f58"
+
+[[kv_namespaces]]
+binding = "VIEWS"
+id = "91b784ad2054420eb0e36a527eb94eb5"

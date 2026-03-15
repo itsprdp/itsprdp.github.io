@@ -1,9 +1,12 @@
 ---
 layout: default
 ---
-<div class="row justify-content-center">
-  <div class="col-lg-8">
+<div class="row">
+  <div class="col-lg-8 offset-lg-1">
     <article>
+      {% if page.image %}
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded mb-4">
+      {% endif %}
       <header class="mb-4">
         <h1>{{ page.title }}</h1>
         <div class="text-muted small">
@@ -14,9 +17,30 @@ layout: default
               <span class="badge bg-secondary">{{ tag }}</span>
             {% endfor %}
           {% endif %}
+          {% assign words = content | number_of_words %}
+          {% assign minutes = words | divided_by: 200 %}
+          {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+          &middot; {{ minutes }} min read
+          &middot; <span id="post-views" class="post-views">—</span>
         </div>
       </header>
       {{ content }}
+      <div class="like-bar mt-5 pt-4 border-top text-center">
+        <button id="like-btn" class="btn like-btn" aria-label="Like this post">
+          <i class="bi bi-heart" id="like-icon"></i>
+          <span id="like-count" class="ms-1">—</span>
+        </button>
+        <p class="text-muted small mt-1 mb-0">Did you enjoy this post?</p>
+      </div>
     </article>
   </div>
+  <div class="col-lg-2 d-none d-lg-block">
+    <div class="toc-sidebar">
+      <p class="toc-title">On this page</p>
+      <nav id="toc-nav"></nav>
+    </div>
+  </div>
 </div>
+<script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/likes.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/analytics.js' | relative_url }}"></script>

@@ -18,10 +18,14 @@ social:
 
 avatar: assets/img/avatar.jpg
 
+excerpt_separator: "<!--more-->"
+
 paginate: 10
 paginate_path: "/page:num/"
 
 permalink: /:year/:month/:day/:title/
+
+cloudflare_analytics_token: "3667214d21d04454ad8cba7f963b1ff7"
 
 plugins:
   - jekyll-seo-tag

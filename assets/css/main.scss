@@ -26,3 +26,45 @@ article img {
   max-width: 100%;
   height: auto;
 }
+
+/* Offset anchor targets for fixed navbar */
+article h2, article h3, article h4 {
+  scroll-margin-top: 5rem;
+}
+
+/* Sticky TOC sidebar */
+.toc-sidebar {
+  position: sticky;
+  top: 5rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+}
+.toc-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bs-secondary-color);
+  margin-bottom: 0.5rem;
+}
+.toc-list { font-size: 0.875rem; }
+.toc-h3 { padding-left: 0.75rem; }
+.toc-link {
+  color: var(--bs-secondary-color);
+  display: block;
+  padding: 0.15rem 0;
+}
+.toc-link:hover { color: var(--bs-body-color); }
+.toc-active { color: var(--bs-body-color) !important; font-weight: 500; }
+
+/* Like button */
+.like-btn {
+  font-size: 1.25rem;
+  color: var(--bs-secondary-color);
+  border: none;
+  background: none;
+  transition: transform 0.1s ease, color 0.15s ease;
+  &:hover { color: #e25555; transform: scale(1.1); }
+  &:active { transform: scale(0.95); }
+  &.liked { color: #e25555; }
+}

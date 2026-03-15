@@ -3,16 +3,23 @@ layout: default
 ---
 <div class="row justify-content-center">
   <div class="col-lg-8">
-    {% if paginator.posts and paginator.posts.size > 0 %}
-      {% for post in paginator.posts %}
+    {% assign posts = paginator.posts | default: site.posts %}
+    {% if posts.size > 0 %}
+      {% for post in posts %}
         <article class="mb-4 pb-4 border-bottom">
+          {% if post.image %}
+            <a href="{{ post.url | relative_url }}">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="img-fluid rounded mb-3">
+            </a>
+          {% endif %}
           <h2><a href="{{ post.url | relative_url }}" class="text-decoration-none">{{ post.title }}</a></h2>
           <div class="text-muted small mb-2">
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
           </div>
           {% if post.excerpt %}
-            <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            <div class="post-excerpt">{{ post.excerpt }}</div>
           {% endif %}
+          <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-secondary mt-2">Read more</a>
         </article>
       {% endfor %}
       {% if paginator.total_pages > 1 %}
