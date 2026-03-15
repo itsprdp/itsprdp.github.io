@@ -1,0 +1,88 @@
+<!-- Top Navbar -->
+<header id="topbar-wrapper" aria-label="Top Bar">
+  <div id="topbar" class="d-flex align-items-center justify-content-between px-3 px-lg-4 h-100">
+
+    <!-- Site title -->
+    <a href="{{ '/' | relative_url }}" class="site-title fw-bold text-decoration-none">
+      {{ site.title }}
+    </a>
+
+    <!-- Nav links -->
+    <nav id="top-nav" class="d-none d-lg-flex align-items-center gap-3">
+      <a href="{{ '/about/' | relative_url }}"
+         class="nav-link{% if page.url == '/about/' %} active{% endif %}">
+        Home
+      </a>
+      {% for tab in site.tabs %}
+        <a href="{{ tab.url | relative_url }}"
+           class="nav-link{% if tab.url == page.url %} active{% endif %}">
+          {{ tab.title }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- Right controls -->
+    <div class="d-flex align-items-center gap-2">
+      {% unless site.theme_mode %}
+        <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+          <i class="fas fa-fw" id="mode-icon"></i>
+        </button>
+      {% endunless %}
+
+      <!-- Mobile hamburger -->
+      <button class="btn btn-link nav-link d-lg-none" id="mobile-nav-toggle" aria-label="Menu">
+        <i class="fas fa-bars fa-fw"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav dropdown -->
+  <nav id="mobile-nav" class="d-lg-none d-none flex-column px-3 pb-2">
+    <a href="{{ '/about/' | relative_url }}"
+       class="nav-link{% if page.url == '/about/' %} active{% endif %}">
+      Home
+    </a>
+    {% for tab in site.tabs %}
+      <a href="{{ tab.url | relative_url }}"
+         class="nav-link{% if tab.url == page.url %} active{% endif %}">
+        {{ tab.title }}
+      </a>
+    {% endfor %}
+  </nav>
+</header>
+
+<script>
+  document.getElementById('mobile-nav-toggle').addEventListener('click', function () {
+    var nav = document.getElementById('mobile-nav');
+    nav.classList.toggle('d-none');
+    nav.classList.toggle('d-flex');
+  });
+
+  // Dark mode icon: update based on current data-mode attribute or system preference
+  (function () {
+    var icon = document.getElementById('mode-icon');
+    if (!icon) return;
+
+    function isDark() {
+      var mode = document.documentElement.getAttribute('data-mode');
+      if (mode === 'dark') return true;
+      if (mode === 'light') return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    function updateIcon() {
+      icon.className = 'fas fa-fw ' + (isDark() ? 'fa-sun' : 'fa-moon');
+    }
+
+    updateIcon();
+
+    // Watch for Chirpy setting data-mode on <html>
+    new MutationObserver(updateIcon).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-mode']
+    });
+
+    // Also catch system preference changes (when no data-mode is set)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateIcon);
+  })();
+</script>

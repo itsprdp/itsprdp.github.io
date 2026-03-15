@@ -1,0 +1,13 @@
+- type: github
+  icon: "fab fa-github"
+
+- type: linkedin
+  icon: "fab fa-linkedin"
+
+- type: keybase
+  icon: "fab fa-keybase"
+  url: "https://keybase.io/itsprdp"
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true

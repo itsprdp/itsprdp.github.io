@@ -1,9 +1,6 @@
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem "jekyll-github-metadata"
-gem "jekyll-octicons"
-gem "jemoji"
-gem "rake"
-gem "faraday-retry"
+source "https://rubygems.org"
+
+gem "jekyll-theme-chirpy", "~> 7.4", ">= 7.4.1"
+gem "jekyll-feed", "~> 0.12"
 
 ruby "~> 3.4"
