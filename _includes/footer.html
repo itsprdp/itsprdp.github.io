@@ -1,45 +1,28 @@
-<!-- The Footer -->
-
-<footer aria-label="Site Info" class="text-muted pb-lg-3">
-  <div class="d-flex flex-column justify-content-center flex-lg-row justify-content-lg-between align-items-lg-center pt-3">
-    <p>
-      {{- '©' }}
-      <time>{{ 'now' | date: '%Y' }}</time>
-
-      {% if site.social.links %}
-        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-      {% else %}
-        <em class="fst-normal">{{ site.social.name }}</em>.
-      {% endif %}
-
-      {% if site.data.locales[include.lang].copyright.brief %}
-        <span
-          data-bs-toggle="tooltip"
-          data-bs-placement="top"
-          title="{{ site.data.locales[include.lang].copyright.verbose }}"
-        >
-          {{- site.data.locales[include.lang].copyright.brief -}}
-        </span>
-      {% endif %}
-    </p>
-
-    <p>
-      {%- capture _platform -%}
-        <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-      {%- endcapture -%}
-
-      {%- capture _theme -%}
-        <a
-          data-bs-toggle="tooltip"
-          data-bs-placement="top"
-          title="v{{ theme.version }}"
-          href="https://github.com/cotes2020/jekyll-theme-chirpy"
-          target="_blank"
-          rel="noopener"
-        >Chirpy</a>
-      {%- endcapture -%}
-
-      {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
-    </p>
+<footer class="py-4 mt-auto border-top">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-muted small">
+      <p class="mb-0">
+        &copy; <time>{{ 'now' | date: '%Y' }}</time>
+        <a href="{{ site.social.links[0] }}" class="text-muted text-decoration-none">{{ site.social.name }}</a>
+        &middot; Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener" class="text-muted">Jekyll</a>
+        &amp; <a href="https://getbootstrap.com" target="_blank" rel="noopener" class="text-muted">Bootstrap</a>
+        &middot; Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener" class="text-muted">GitHub Pages</a>
+        &amp; <a href="https://www.cloudflare.com" target="_blank" rel="noopener" class="text-muted">Cloudflare</a>, for free
+      </p>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener" aria-label="GitHub" class="text-muted">
+          <i class="bi bi-github fs-5"></i>
+        </a>
+        <a href="{{ site.social.links[0] }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-muted">
+          <i class="bi bi-linkedin fs-5"></i>
+        </a>
+        <a href="https://www.instagram.com/dhee_eep" target="_blank" rel="noopener" aria-label="Instagram" class="text-muted">
+          <i class="bi bi-instagram fs-5"></i>
+        </a>
+        <a href="https://strava.com/athletes/dhee_eep" target="_blank" rel="noopener" aria-label="Strava" class="text-muted">
+          <i class="bi bi-strava fs-5"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>

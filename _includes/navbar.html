@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <!-- Collapse must come before the always-visible controls so flex-grow pushes them right -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Theme toggle + hamburger: always visible, pushed to far right on all breakpoints -->
+    <div class="d-flex align-items-center gap-2 ms-auto">
+    <div class="dropdown">
+      <button class="btn btn-link nav-link px-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme" type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false" aria-label="Toggle theme (auto)">
+        <svg class="bi theme-icon-active" width="1em" height="1em" aria-hidden="true"><use href="#circle-half"></use></svg>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi opacity-50" width="1em" height="1em" aria-hidden="true"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi opacity-50" width="1em" height="1em" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center gap-2 active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi opacity-50" width="1em" height="1em" aria-hidden="true"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em" aria-hidden="true"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hamburger: mobile only -->
+    <button class="navbar-toggler border-0 d-lg-none" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+  </div>
+</nav>

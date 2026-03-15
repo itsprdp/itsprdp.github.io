@@ -1,7 +1,7 @@
 ---
+layout: page
 title: About
-icon: fas fa-info-circle
-order: 1
+permalink: /about/
 ---
 
 ![avatar](/assets/img/avatar.jpg){: width="400" style="display: block; margin: 0 auto 1.5rem;" }
@@ -16,7 +16,7 @@ My parents eventually enrolled me in a computer institute near home. The curricu
 
 ---
 
-I pestered my parents for a PC every year, and every year the answer was some version of "later." The day it finally arrived was the week after my 10th grade board exams, in April 2007. My father spent ₹50,000 (roughly $1,200 at the time) on a custom-built machine: an [Intel Pentium Core 2 Duo](https://en.wikipedia.org/wiki/Intel_Core_2) with an LCD Monitor. It was the best gift I’ve ever received.
+I pestered my parents for a PC every year, and every year the answer was some version of "later." The day it finally arrived was the week after my 10th grade board exams, in April 2007. My father spent ₹50,000 (roughly $1,200 at the time) on a custom-built machine: an [Intel Pentium Core 2 Duo](https://en.wikipedia.org/wiki/Intel_Core_2) with an LCD Monitor. It was the best gift I've ever received.
 
 Around that time I had to make a choice about what came next. Most of my classmates took the standard two-year pre-university path before engineering. I chose differently: a three-year Diploma in Computer Science at [Siddaganga Polytechnic](https://spttumkur.ac.in/) in Tumkur. It was a more hands-on curriculum, and it meant I was writing actual code sooner. From there, I did a lateral entry into the second year of [Sir M Visvesvaraya Institute of Technology](https://www.sirmvit.edu/) in Bangalore (a [VTU](https://vtu.ac.in/en/)-affiliated college), completing a 3+3 year path to an engineering degree instead of the usual 2+4 years.
 
@@ -24,7 +24,7 @@ In those years I also got obsessed with hardware, cycled through Linux distribut
 
 ---
 
-I spent about six and a half years at [Beautiful Code](https://www.beautifulcode.co/) in Hyderabad, joining as the second engineer hired. For a while there were only four of us, which meant I touched everything: full-stack development, DevOps, AWS infrastructure. When Docker and Kubernetes arrived around 2015–2016, we migrated critical applications to Google Cloud and containerised them. It was a formative stretch, the kind of early career experience where you learn fast because there's no one else to hand things off to.
+I spent about six and a half years at [Beautiful Code](https://www.beautifulcode.co/) in [Hyderabad](https://en.wikipedia.org/wiki/Hyderabad), joining as the second engineer hired. For a while there were only four of us, which meant I touched everything: full-stack development, DevOps, AWS infrastructure. When Docker and Kubernetes arrived around 2015–2016, we migrated critical applications to Google Cloud and containerised them. It was a formative stretch, the kind of early career experience where you learn fast because there's no one else to hand things off to.
 
 I joined [Bloomberg](https://www.bloomberg.com/company/values/tech-at-bloomberg/) in April 2020. The first six months were remote from India; the pandemic had made that the default. I relocated to London in early 2021, then moved to the San Francisco office a couple of years later, and in April 2024 moved to Fremont, CA, where I commute to the SF office now. There's a lot more to say about that journey (the work, the cities, the people) and I'll write it up properly one day.
 
@@ -44,11 +44,3 @@ I run three days a week, long runs on Saturdays, mostly road. Seven half maratho
 
 What keeps me at it is hard to explain clearly. Running has become meditative, something that has changed how I think about patience, about staying with discomfort, about the gap between where you are and where you're trying to get to. The lessons don't stay on the road. They show up everywhere.
 
----
-
-## Links
-
-- [Strava](https://strava.com/athletes/dhee_eep)
-- [LinkedIn](https://www.linkedin.com/in/pgangadharaiah)
-- [GitHub](https://github.com/itsprdp)
-- [Instagram](https://www.instagram.com/dhee_eep)
