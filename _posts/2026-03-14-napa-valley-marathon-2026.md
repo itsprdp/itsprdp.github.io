@@ -13,7 +13,7 @@ It's 5:40am on a Sunday morning, March 1st, 2026. I'm sitting in a shuttle outsi
 
 That phrase, "this time", has been doing a lot of work in my head for months. Though this time I was confident I'd finish, I just didn't know how much suffering was on the menu.
 
-Today, 1,944 runners are aiming to cross the finish line in Napa Valley. I intend to be one of them.
+Today, 1,944 runners are aiming to cross the finish line in Napa Valley. I intend to be one of them. Strava's race predictor had me at 3:34:13, Garmin's at 3:18. Somewhere in that 16-minute gap was probably the truth.
 
 ![Race bib](/assets/img/posts/napa-2026/intro.jpg)
 
@@ -128,7 +128,7 @@ Around mile 9 there was a good-sized crowd lining the road cheering runners on, 
 
 I never saw the Kazakhstan lady again after that either. The brief adrenaline from the camera wore off quickly and I dialed back down. Settled in with a new loose group for the next 2 to 3 miles and found a steady rhythm again.
 
-Gel number three came around mile 12 and shortly after we were passing through the half marathon start area. The half marathon gun had gone off around the same time as the full, so the crowds and runners who had gathered there were long gone. A few race crew members were breaking down equipment and loading it onto trucks. Quiet stretch.
+Gel number three came around mile 12 and shortly after we were passing through the half marathon start area. The half marathon gun had gone off 30 minutes before the full marathon, so the crowds and runners who had gathered there were long gone. A few race crew members were breaking down equipment and loading it onto trucks. Quiet stretch.
 
 Tail end of mile 14 had a decent climb and by the time I reached mile 15, most of the people around me had either slowed down or pushed ahead. A gap of 60 to 90 seconds opened up between the groups in front and behind me and I was running alone for the first time. That was fine. Following the plan meant slowing here anyway. I settled into 8:05 to 8:15 per mile and held it.
 
