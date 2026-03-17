@@ -4,9 +4,6 @@ layout: default
 <div class="row">
   <div class="col-lg-8 offset-lg-1">
     <article>
-      {% if page.image %}
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded mb-4">
-      {% endif %}
       <header class="mb-4">
         <h1>{{ page.title }}</h1>
         <div class="text-muted small">
@@ -41,6 +38,7 @@ layout: default
     </div>
   </div>
 </div>
+<script src="{{ '/assets/js/images.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/likes.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/analytics.js' | relative_url }}"></script>

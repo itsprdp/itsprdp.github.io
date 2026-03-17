@@ -5,7 +5,7 @@ export default {
     const type = url.searchParams.get('type') || 'like';
     const pct  = url.searchParams.get('pct');
 
-    const ALLOWED = ['https://pradeepg.me', 'http://localhost:4000', 'http://127.0.0.1:4000'];
+    const ALLOWED = ['https://pradeepg.me', 'https://www.pradeepg.me'];
     const origin = request.headers.get('Origin') || '';
     const corsOrigin = ALLOWED.includes(origin) ? origin : ALLOWED[0];
 

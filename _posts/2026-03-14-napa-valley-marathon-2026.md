@@ -3,7 +3,8 @@ layout: post
 title: "Napa Valley Marathon 2026: Second Chances"
 date: 2026-03-14
 tags: [running, marathon, race-report]
-image: # /assets/img/posts/napa-valley-marathon-2026.jpg
+image: /assets/img/posts/napa-2026/intro.jpg
+image_position: "0 18%"
 ---
 
 <!-- DRAFT - fill in narrative tomorrow -->
