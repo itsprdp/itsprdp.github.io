@@ -11,10 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(({ count }) => { viewEl.textContent = count.toLocaleString() + ' views'; })
       .catch(() => {});
 
-    // Increment once per session
-    if (!sessionStorage.getItem('viewed:' + slug)) {
+    // Increment once per 24 hours per post per browser
+    const viewedKey = 'viewed:' + slug;
+    const lastViewed = parseInt(localStorage.getItem(viewedKey) || '0');
+    const elapsed = Date.now() - lastViewed;
+    if (elapsed > 24 * 60 * 60 * 1000) {
       fetch(`${WORKER}?slug=${encodeURIComponent(slug)}&type=view`, { method: 'POST' })
-        .then(() => sessionStorage.setItem('viewed:' + slug, '1'))
+        .then(() => localStorage.setItem(viewedKey, String(Date.now())))
         .catch(() => {});
     }
   }
@@ -25,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const milestones = [25, 50, 75, 100];
   const fired = new Set(
-    milestones.filter(p => sessionStorage.getItem(`depth:${p}:${slug}`))
+    milestones.filter(p => localStorage.getItem(`depth:${p}:${slug}`))
   );
 
   const sendDepth = (pct) => {
     if (fired.has(pct)) return;
     fired.add(pct);
-    sessionStorage.setItem(`depth:${pct}:${slug}`, '1');
+    localStorage.setItem(`depth:${pct}:${slug}`, '1');
     fetch(`${WORKER}?slug=${encodeURIComponent(slug)}&type=depth&pct=${pct}`, { method: 'POST' })
       .catch(() => {});
   };
